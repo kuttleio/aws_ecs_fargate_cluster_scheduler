@@ -95,7 +95,7 @@ resource aws_cloudwatch_event_target cluster_on {
 }
 
 resource aws_lambda_permission cluster_on_permission {
-  statement_id  = "AllowExecutionFromCloudWatch"
+  statement_id  = "AllowExecutionFromCloudWatchTurnOn"
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.cluster_scheduler.function_name
   principal     = "events.amazonaws.com"
@@ -119,7 +119,7 @@ resource aws_cloudwatch_event_target cluster_off {
 }
 
 resource aws_lambda_permission cluster_off_permission {
-  statement_id  = "AllowExecutionFromCloudWatch"
+  statement_id  = "AllowExecutionFromCloudWatchTurnOff"
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.cluster_scheduler.function_name
   principal     = "events.amazonaws.com"
