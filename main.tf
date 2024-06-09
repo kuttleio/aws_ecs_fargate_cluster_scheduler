@@ -58,7 +58,7 @@ resource aws_lambda_function cluster_scheduler_turn_on {
   timeout       = 60
   memory_size   = 512
   publish       = true
-  filename      = "${path.module}/lambda-turn-on.zip"
+  filename      = "${path.module}/lambda_turn_on.zip"
   role          = aws_iam_role.cluster_scheduler_lambda_role.arn
 
   environment {
@@ -86,7 +86,7 @@ resource aws_lambda_function cluster_scheduler_turn_off {
   timeout       = 60
   memory_size   = 512
   publish       = true
-  filename      = "${path.module}/lambda-turn-off.zip"
+  filename      = "${path.module}/lambda_turn_off.zip"
   role          = aws_iam_role.cluster_scheduler_lambda_role.arn
 
   environment {
