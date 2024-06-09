@@ -21,5 +21,5 @@ variable turn_on_schedule {
 
 variable turn_off_schedule {
   description = "Turn OFF Schedule"
-  default     = "cron(0 22 ? * SUN-FRI *)"
+  default     = "cron(0 20 ? * SUN-FRI *)"
 }
